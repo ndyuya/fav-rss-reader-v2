@@ -53,14 +53,14 @@ mobile backendのデータストアへお気に入り情報を保存するタイ
 1. www/js/favorite-online.jsの`(4) 保存したい値をセットし、保存するところ`の部分に以下のコードを記載する
     ```javascript
     favorite.set("uuid", self.uuid)
-                .set("url", url)
-                .save()
-                .then(function(favorite){
-                    self.apply(item);
-                })
-                .catch(function(error){
-                    self.apply(item);
-                });
+            .set("url", url)
+            .save()
+            .then(function(favorite){
+                self.apply(item);
+            })
+            .catch(function(error){
+                self.apply(item);
+            });
     ```
 
 1. www/js/favorite-online.jsの`(5) uuidとurlの両方が合致するオブジェクトを検索し、見つけたものを削除するところ`の部分に以下のコードを記載する
