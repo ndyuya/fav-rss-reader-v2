@@ -1,0 +1,19 @@
+/* 星を描画する空間を作るためのスタイル */
+.feed-item {
+    position: relative;
+}
+
+.feed-item h2 {
+    margin: 2px 70px 5px 0 !important;
+}
+
+/* 星自体のスタイル */
+.feed-item .fa-star,.fa-star-o {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.feed-item .fa-star {
+    color: GoldenRod;
+}
