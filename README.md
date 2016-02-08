@@ -122,6 +122,30 @@ mobile backendのデータストアへお気に入り情報を保存するタイ
 
 1. [Monacaデバッガー](http://ja.monaca.io/debugger.html)で動作確認をする
 
+### お気に入り機能付きRSSリーダー＜簡易オンライン版＞
+
+オンライン版のコード補完済みスクリプトを使った簡易バージョンです。
+mobile backendのデータストアへお気に入り情報を保存するタイプです。
+以下の手順に従ってオフライン版を改変してください。
+予めオフライン版の動作確認まで完了しておく必要があります。
+
+1. [NCMB javascript SDK v2](https://github.com/NIFTYCloud-mbaas/ncmb_js/releases)でjavascript SDKをダウンロードする
+1. Monaca IDE上で、1.でダウンロードしたncmb.min.jsをwww/jsフォルダにアップロードする
+1. www/index.htmlの11行目と12行目の間に以下のコードを追記する
+    ```html
+    <script src="js/ncmb.min.js"></script>
+    ```
+
+1. www/index.htmlの13行目にある`<script src="favorite-offline.js"></script>`を以下のように変更する
+    ```html
+    <script src="js/favorite-online.completion.js"></script>
+    ```
+
+1. [mobile backendのダッシュボード](https://console.mb.cloud.nifty.com/)で新しいアプリを作成する
+1. 作成したアプリのアプリケーションキーをコピーして、Monaca IDE上のwww/index.htmlの22行目にある「YOUR_NCMB_APPLICATION_KEY」を置き換える
+1. 作成したアプリのクライアントキーをコピーして、Monaca IDE上のwww/index.htmlの23行目にある「YOUR_NCMB_CLIENT_KEY」を置き換える
+1. [Monacaデバッガー](http://ja.monaca.io/debugger.html)で動作確認をする
+
 ## See
 
 * Monaca
